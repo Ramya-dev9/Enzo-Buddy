@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { AngularBotModule } from './enzo-buddy-bot/bot-module';
+import { AppRoutingModule } from './app-router.module';
+import {APP_BASE_HREF} from '@angular/common';
+import { HomeComponent } from './enzo-buddy-bot/home/home.component';
+import { ChatComponent } from './enzo-buddy-bot/chat/chat.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
+  imports:[ 
+    BrowserModule, 
+    FormsModule, 
+    AppRoutingModule, 
+    AngularBotModule
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}]
+
+
 })
 export class AppModule { }

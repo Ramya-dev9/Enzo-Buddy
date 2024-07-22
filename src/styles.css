@@ -1,1 +1,87 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{font-family:Roberto,sans-serif;color:#001219}
+body {
+    background-color: black;
+  }
+  .textarea-dark-theme {
+    background-color: black;
+  }
+  .textarea-light-theme {
+    background-color: white;
+  }
+
+  .app-style {
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+  .theme-button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: absolute;
+    right: 30;
+    top: 30;
+  }
+  .child-style {
+    margin: auto;
+  }
+
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+  textarea {
+    field-sizing: content;
+    background-color: black;
+    color: grey;
+  }
+
+  /* for laptop */
+  textarea {
+    min-height: 2lh;
+    max-height: 5lh;
+    padding: 13px;
+  }
+
+  .container {
+    margin: 10px;
+    position:relative;
+    border: 2px solid #696969;
+    border-radius: 20px;
+}
+
+button {
+  position: absolute;
+  right: 0px;
+  border-radius: 20px;
+  border: none;
+  background-color: #afafaf;
+}
+/* for laptop */
+button {
+  width: 70px;
+  height: 41px;
+}
+
+/* for laptop */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 5rem;
+  font-family: Google Sans,Helvetica Neue,sans-serif;
+  letter-spacing: normal;
+  font-weight: 500;
+  letter-spacing: -.03em;
+}
+h1 {
+display: block;
+font-size: 2em;
+font-weight: bold;
+unicode-bidi: isolate;
+margin: 0px;
+}
+h1 {
+font-size: 72px;
+background: -webkit-linear-gradient(#eee, #333);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}

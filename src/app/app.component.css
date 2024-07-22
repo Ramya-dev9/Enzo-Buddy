@@ -1,12 +1,5 @@
-header {
-    padding: 10px;
-    display: flex;
-}
-
-header>h1 {
-    font-weight: bolder;
-}
-
-h1 {
-    margin-right: 5px;
-}
+/* body {
+  margin: 0px;
+  width: 100%;
+  padding: 10px;
+} */
