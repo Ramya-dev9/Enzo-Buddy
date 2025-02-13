@@ -1,0 +1,78 @@
+.message {
+    border-radius: 50px;
+    margin: 0 15px 20px;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 20px;
+  }
+  .message.to {
+    background-color: #373737;
+    color: #fff;
+    margin-left: 100px;
+    text-align: right;
+  }
+  .message.from {
+    background-color: #E5E4E9;
+    color: #363636;
+    margin-right: 100px;
+  }
+  .message.to + .message.to,
+  .message.from + .message.from {
+    margin-top: -10px;
+  }
+  .response-container {
+    min-width: 300px;  /* Ensures a minimum width */
+    max-width: 800px;  /* Prevents it from becoming too wide */
+    width: fit-content; /* Adjusts width dynamically but respects min-width */
+    word-wrap: break-word; /* Ensures long words do not overflow */
+    overflow: hidden; /* Prevents text from affecting layout */
+    display: block; /* Ensures proper block layout */
+    padding: 10px; /* Adds spacing inside the container */
+    border-radius: 10px; /* Adds rounded corners */
+    text-align: left; /* Ensures proper text alignment */
+    max-height: 400px;  /* Set a height for scrolling */
+ 
+  overflow-y: scroll; /* Enables scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+}
+
+.response-container::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari */
+}
+
+
+
+
+.total-messages {
+  color: #ffcc00;
+  padding: 0px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.count {
+  color: #ffcc00; /* Highlight the number */
+  font-size: 16px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+  
+
+ 

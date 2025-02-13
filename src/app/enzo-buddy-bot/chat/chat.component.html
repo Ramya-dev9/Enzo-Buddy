@@ -1,15 +1,20 @@
-<div class="row top-bar">
+<div *ngIf="showHeader" class="row top-bar chat-container">
     <h1 class="style-hello">Hello {{userName}},
         {{greeting}}</h1>
     <h1>How can I help
         you?</h1>
 </div>
-<ng-container *ngFor="let message of messages">
-    <div class="message" [ngClass]="{ 'from': message.author === 'bot',
-    'to': message.author === 'user' }">
-        {{ message.content }}
-    </div>
-</ng-container>
+<div class="response-container messages" #messageContainer>
+    <ng-container *ngFor="let message of messages">
+        <div 
+          class="message" 
+          [ngClass]="{ 'from': message.author === 'bot', 'to': message.author === 'user' }"
+          [innerHTML]="message.content">
+        </div>
+      </ng-container>
+</div>
+
+  
 <!-- <label *ngIf="messages.length == 0; else dialogInfo" for="nameField">Your message</label> -->
 <!-- <input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text">
     
@@ -25,7 +30,11 @@
     </textarea>
 </div>
 
+<div class="total-messages">
+    <!-- Show total messages when there are messages -->
+<ng-container *ngIf="messages.length > 0">
+    Total messages: <span class="count">{{ messages.length }}</span>
+</ng-container>
+</div>
 
-<ng-template #dialogInfo>
-    <span [className]="'float-right'">Total messages: {{messages.length}}</span>
-</ng-template>
+

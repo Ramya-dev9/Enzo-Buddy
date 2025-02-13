@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-router.module';
 import {APP_BASE_HREF} from '@angular/common';
 import { HomeComponent } from './enzo-buddy-bot/home/home.component';
 import { ChatComponent } from './enzo-buddy-bot/chat/chat.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports:[ 
     BrowserModule, 
     FormsModule, 
     AppRoutingModule, 
-    AngularBotModule
+    AngularBotModule,
+    HttpClientModule
   ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
